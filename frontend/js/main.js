@@ -17,6 +17,8 @@ window.onload = () => {
       const card = document.createElement("div");
       card.setAttribute("class", "card");
 
+     
+
       const h1 = document.createElement("h1");
       h1.textContent = movie.title;
 
@@ -26,15 +28,24 @@ window.onload = () => {
       const duracion = document.createElement("p");
       duracion.textContent = `Duración: ${movie.length}`;
 
+      const toForm = document.createElement("a")
+      toForm.textContent = "Editar";
+      toForm.setAttribute("href", `/form/${movie.id}`)
+     
+
       container.appendChild(card);
       card.appendChild(h1);
       card.appendChild(p);
+      
       if (movie.genre !== null) {
         const genero = document.createElement("p");
         genero.textContent = `Genero: ${movie.genre.name}`;
         card.appendChild(genero);
       }
       card.appendChild(duracion);
+      card.appendChild(toForm);
+ 
+
     });
   })
 };
