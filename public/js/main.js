@@ -16,6 +16,14 @@ window.onload = () => {
     data.forEach((movie) => {
       const card = document.createElement("div");
       card.setAttribute("class", "card");
+      card.style.position = "relative"
+
+      const star = document.createElement("i");
+      star.setAttribute("class", "fa-regular fa-star")
+      star.style.position = "absolute"
+      star.style.top = "10px"
+      star.style.right = "10px"
+      
 
      const a = document.createElement("a");
      a.setAttribute("href", `/detail/${movie.id}`)
@@ -36,7 +44,9 @@ window.onload = () => {
      
 
       container.appendChild(card);
+      
       card.appendChild(h1);
+      card.appendChild(star)
       card.appendChild(p);
 
       
