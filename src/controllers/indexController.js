@@ -11,6 +11,7 @@ const indexController = {
     },
     detail: (req, res) => {
         const id = req.params.id
+        console.log("esto es id", id)
         fetch(`http://localhost:3031/api/movies/${id}`)
         .then(response => {
             return response.json()

@@ -3,6 +3,7 @@ window.onload = function(){
 const form = document.getElementById("formulario");
 const agregar = document.getElementById("createButton");
   const editar = document.getElementById("editButton")
+  const borrar = document.getElementById("deleteButton")
 
 // Aqui debemos agregar nuestro fetch
 
@@ -60,6 +61,25 @@ editar.addEventListener("click", function (e) {
     })
 
 })
+
+
+borrar.addEventListener("click", (e => {
+    console.log("a borrarrrrrrrrrrrrrr")
+    const id = window.location.pathname.match(/\d+$/)[0]
+
+    fetch(`http://localhost:3031/api/movies/delete/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+
+    }).then(response => {
+        return response.json()
+    }).then(data => {
+        console.log("asdasd", data)
+    })
+   
+}))
 
 
 }
