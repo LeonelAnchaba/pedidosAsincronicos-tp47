@@ -80,7 +80,7 @@ const moviesAPIController = {
                 awards: req.body.awards,
                 release_date: req.body.release_date,
                 length: req.body.length,
-                genre_id: req.body.genre_id
+                // genre_id: req.body.genre_id
             }
         )
         .then(confirm => {
