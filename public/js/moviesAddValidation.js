@@ -7,6 +7,7 @@ window.onload = function(){
     article.classList.add('fondoTransparente');
     formulario.classList.add('fondoCRUD');
 
+    console.log("sdfjlksdjflskdjfskdlf")
 //------DESDE AQUÍ CONTINUE CON LAS VALIDACIONES DEL FORMULARIO -------//    
     let form = document.querySelector('.form');
     form.title.focus();

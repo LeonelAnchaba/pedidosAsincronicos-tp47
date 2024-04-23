@@ -1,9 +1,8 @@
-console.log("llego al js")
+
 window.onload = function(){
 const form = document.getElementById("formulario");
 const agregar = document.getElementById("createButton");
   
-console.log("holi, entré")
 
 // Aqui debemos agregar nuestro fetch
 

@@ -6,6 +6,7 @@ const indexController = require('../controllers/indexController');
 //Listado de películas
 router.get('/', indexController.home);
 router.get('/form', indexController.form);
-router.post("/", indexController.create)
+router.post("/", indexController.create);
+router.get("/detail/:id", indexController.detail)
 
 module.exports = router;

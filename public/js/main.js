@@ -17,7 +17,9 @@ window.onload = () => {
       const card = document.createElement("div");
       card.setAttribute("class", "card");
 
-     
+     const a = document.createElement("a");
+     a.setAttribute("href", `/detail/${movie.id}`)
+     a.textContent = "Detalle"
 
       const h1 = document.createElement("h1");
       h1.textContent = movie.title;
@@ -28,14 +30,16 @@ window.onload = () => {
       const duracion = document.createElement("p");
       duracion.textContent = `Duración: ${movie.length}`;
 
-      // const toForm = document.createElement("a")
-      // toForm.textContent = "Editar";
-      // toForm.setAttribute("href", `/form/${movie.id}`)
+      const toForm = document.createElement("a")
+      toForm.textContent = "Editar";
+      toForm.setAttribute("href", `/form/${movie.id}`)
      
 
       container.appendChild(card);
       card.appendChild(h1);
       card.appendChild(p);
+
+      
       
       if (movie.genre !== null) {
         const genero = document.createElement("p");
@@ -43,7 +47,9 @@ window.onload = () => {
         card.appendChild(genero);
       }
       card.appendChild(duracion);
-      // card.appendChild(toForm);
+      card.appendChild(a);
+      card.appendChild(toForm);
+      
  
 
     });
