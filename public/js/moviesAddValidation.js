@@ -1,5 +1,4 @@
 window.onload = function(){
-    console.log("y al de validaciones")
     let titulo = document.querySelector('.moviesAddTitulo')
     let formulario = document.querySelector('#formulario');
     let article = document.querySelector('article');
@@ -40,11 +39,9 @@ window.onload = function(){
             form.awards.focus();
         };
         if (awards.value <= 0 || awards.value > 10) {
-            console.log(awards.value)
             errors.push('El campo premios no puede ser menor a 0 ni mayor a 10');
             awards.classList.add('is-invalid');
         } else {
-            console.log("no hay error", awards.value)
             awards.classList.add('is-valid');
             awards.classList.remove('is-invalid');
             form.release_date.focus();

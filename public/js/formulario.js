@@ -1,15 +1,14 @@
 console.log("llego al js")
 window.onload = function(){
 const form = document.getElementById("formulario");
-const agregar = document.querySelector(".botonAgregar");
+const agregar = document.getElementById("createButton");
   
-  
+console.log("holi, entré")
 
 // Aqui debemos agregar nuestro fetch
 
 agregar.addEventListener("click", function(e) {
-    
-    console.log("hiciste click en agregar")
+    console.log("llegamos al evento para agregar la peli")
 
     const movie = {
         title: document.querySelector('#title').value,
@@ -30,10 +29,10 @@ agregar.addEventListener("click", function(e) {
         return response.json()
     })
     .then(data => {
-        console.log(data);
+        console.log("Que me responde la segunda promesa?: ", data);
     })
     
-})
+ })
 
 
 }
