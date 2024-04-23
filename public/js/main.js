@@ -30,9 +30,9 @@ window.onload = () => {
       const duracion = document.createElement("p");
       duracion.textContent = `Duración: ${movie.length}`;
 
-      const toForm = document.createElement("a")
-      toForm.textContent = "Editar";
-      toForm.setAttribute("href", `/form/${movie.id}`)
+      // const toForm = document.createElement("a")
+      // toForm.textContent = "Editar";
+      // toForm.setAttribute("href", `/form/${movie.id}`)
      
 
       container.appendChild(card);
@@ -48,7 +48,7 @@ window.onload = () => {
       }
       card.appendChild(duracion);
       card.appendChild(a);
-      card.appendChild(toForm);
+      // card.appendChild(toForm);
       
  
 

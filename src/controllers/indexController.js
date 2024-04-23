@@ -16,8 +16,6 @@ const indexController = {
             return response.json()
         })
         .then(pelicula =>{
-            // const date = pelicula.data.release_data
-
             res.render("formulario.ejs", {pelicula})
             
         })
