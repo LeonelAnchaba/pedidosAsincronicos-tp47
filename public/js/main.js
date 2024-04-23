@@ -3,7 +3,7 @@ window.onload = () => {
   const container = document.createElement("div");
   container.setAttribute("class", "container");
   app.appendChild(container);
-
+  console.log("holaaaaaaaaa")
   // Aqui debemos agregar nuestro fetch
   fetch('http://localhost:3031/api/movies')
   .then(function(response){
@@ -28,9 +28,9 @@ window.onload = () => {
       const duracion = document.createElement("p");
       duracion.textContent = `Duración: ${movie.length}`;
 
-      const toForm = document.createElement("a")
-      toForm.textContent = "Editar";
-      toForm.setAttribute("href", `/form/${movie.id}`)
+      // const toForm = document.createElement("a")
+      // toForm.textContent = "Editar";
+      // toForm.setAttribute("href", `/form/${movie.id}`)
      
 
       container.appendChild(card);
@@ -43,7 +43,7 @@ window.onload = () => {
         card.appendChild(genero);
       }
       card.appendChild(duracion);
-      card.appendChild(toForm);
+      // card.appendChild(toForm);
  
 
     });

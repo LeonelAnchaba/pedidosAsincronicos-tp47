@@ -36,11 +36,11 @@ const apiActorsRouter = require('./routes/api/actors')
 
 const indexRouter = require('./routes/index')
 
-// app.set('views', path.resolve(__dirname, '../../frontend/views'));
-// app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, './views'));
+app.set('view engine', 'ejs');
 
 
-app.use(express.static(path.resolve(__dirname, '../../frontend')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 
 //Aquí creo la colección de mis recursos de movies (APIs)
